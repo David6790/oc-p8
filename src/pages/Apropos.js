@@ -1,7 +1,12 @@
 import React from "react";
+import Layout from "../components/Layout";
 
 const Apropos = () => {
-  return <div>À propos</div>;
+  return (
+    <Layout>
+      <p>Ceci est la page a propos</p>
+    </Layout>
+  );
 };
 
 export default Apropos;
