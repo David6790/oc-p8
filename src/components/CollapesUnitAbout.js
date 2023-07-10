@@ -13,12 +13,15 @@ const CollapesUnitAbout = ({ title, content }) => {
       <div className="collapesUnit">
         <div className="titleToogle">
           <span>{title}</span>
-          <button className={open ? "buttonActive" : "buttonInactive"}>
-            <i className="fa-solid fa-chevron-up" onClick={toogleCollape}></i>
+          <button
+            onClick={toogleCollape}
+            className={`buttonActive ${open ? "rotate" : "buttonInactive"}`}
+          >
+            <i className="fa-solid fa-chevron-down"></i>
           </button>
         </div>
       </div>
-      <div className={open ? "collapseContentOpen" : "collapseContentClosed"}>
+      <div className={`collapseContent ${open ? "show" : "collapseContent"}`}>
         <p>{content}</p>
       </div>
     </>

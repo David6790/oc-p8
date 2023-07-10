@@ -6,7 +6,10 @@ import CardContainer from "../components/CardContainer";
 const Accueil = () => {
   return (
     <Layout>
-      <Banner />
+      <Banner
+        imageSource="./img/banner.png"
+        content="Chez vous, partout et ailleurs"
+      />
       <CardContainer />
     </Layout>
   );

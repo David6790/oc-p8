@@ -6,7 +6,7 @@ import CollapesContainerAbout from "../components/CollapesContainerAbout";
 const Apropos = () => {
   return (
     <Layout>
-      <Banner />
+      <Banner imageSource="./img/bannerApropos.png" />
       <CollapesContainerAbout />
     </Layout>
   );

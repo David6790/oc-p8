@@ -8,6 +8,7 @@
 
     
     .collapesUnit{
+        z-index: 1;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -19,7 +20,8 @@
         padding: 10px 20px 10px 15px;
         font-size: 24px;
         border-radius: 5px;
-        margin-top: 30px;
+        
+        
        
         
         .titleToogle{
@@ -27,49 +29,52 @@
             width: 100%;
             justify-content: space-between;
         }
-        .buttonInactive{
-            background-color: transparent;
-            border: none;
-            color: white;
-            font-size: 24px;
-            
-          
-        }
         .buttonActive{
             background-color: transparent;
             border: none;
             color: white;
             font-size: 24px;
-            animation: buttonActive 200ms forwards;
+            transition: transform 0.4s ease;
+            transform: rotate(0);
+            
+        }
+        .rotate{
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 24px;
+            transform: rotate(180deg);
 
         }
+       
         
       
 
     }
 }
 
-.collapseContentOpen{
-    z-index: -1;
+.collapseContent{
+    
     display: flex;
     width: 100%;
-    height: 100%;
-    padding: 25px 20px;
+    height: 40px;
+    overflow: hidden;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     background-color: #f2F2F2;
-    animation: contentShow 400ms both;
-   
-    
-    
+    margin-bottom: -20px;
+    transition: transform 0.4s ease;
+    transform: translateY(-40px);
     p{
         color: $colorPrimary;
     }
        
 }
 
-.collapseContentClosed{
-    display: none;
-    animation: contentHide 2300ms;
-   
+.show{
+    
+    height: auto;
+    transform: translateY(0);
+    padding: 25px 20px;
+    margin-bottom: 20px;
 }
