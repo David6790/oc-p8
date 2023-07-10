@@ -1,0 +1,35 @@
+@keyframes contentShow {
+    0%{
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateY(1.0);
+    }
+}
+
+@keyframes contentHide {
+    0%{
+        transform: translateY(1.0);
+    }
+    100%{
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes buttonActive{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(-3.142rad);
+    }
+}
+
+@keyframes buttonInactive{
+    0%{
+        transform: rotate(1);
+    }
+    100%{
+        transform: rotate(-3.142rad);
+    }
+}

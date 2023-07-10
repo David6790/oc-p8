@@ -1,5 +1,6 @@
 @import "./utils/variables";
 @import "./utils/mixins";
+@import "./utils/keyframe";
 @import "./base/generalites";
 @import "./components/header";
 @import "./base/typographie";
@@ -9,3 +10,5 @@
 @import "./components/banner";
 @import "./components/cardContainer";
 @import "./components/cardLogement";
+@import "./components/landing404";
+@import "./components/collapesAbout";

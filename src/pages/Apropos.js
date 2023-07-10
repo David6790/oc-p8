@@ -1,10 +1,13 @@
 import React from "react";
 import Layout from "../components/Layout";
+import Banner from "../components/Banner";
+import CollapesContainerAbout from "../components/CollapesContainerAbout";
 
 const Apropos = () => {
   return (
     <Layout>
-      <p>Ceci est la page a propos</p>
+      <Banner />
+      <CollapesContainerAbout />
     </Layout>
   );
 };
