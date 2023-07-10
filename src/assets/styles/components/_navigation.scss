@@ -1,0 +1,10 @@
+.navigation {
+    ul{
+        @include flexRow;
+        li{
+            margin-left: 50px;
+            color: $colorPrimary;
+        }
+    }
+   
+}
