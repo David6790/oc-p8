@@ -3,17 +3,23 @@ import CardLogement from "./CardLogement";
 
 const CardContainer = () => {
   const [data, setData] = useState([]);
+  const getData = () => {
+    fetch("db.json")
+      .then((res) => res.json())
+      .then((data) => setData(data));
+  };
 
   useEffect(() => {
-    fetch("http://localhost:3004/logements").then((res) =>
-      res.json().then((res) => setData(res))
-    );
+    getData();
   }, []);
+
   return (
     <div className="cardContainer">
-      {data.map((logement) => (
-        <CardLogement key={logement.id} logement={logement} />
-      ))}
+      {data &&
+        data.length > 0 &&
+        data.map((logement) => (
+          <CardLogement key={crypto.randomUUID()} logement={logement} />
+        ))}
     </div>
   );
 };
