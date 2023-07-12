@@ -9,7 +9,6 @@ const CollapesUnitAbout = ({ title, content }) => {
 
   return (
     <>
-      {" "}
       <div className="collapesUnit">
         <div className="titleToogle">
           <span>{title}</span>
@@ -22,7 +21,7 @@ const CollapesUnitAbout = ({ title, content }) => {
         </div>
       </div>
       <div className={`collapseContent ${open ? "show" : "collapseContent"}`}>
-        <p>{content}</p>
+        <div className="collapseText">{content}</div>
       </div>
     </>
   );
