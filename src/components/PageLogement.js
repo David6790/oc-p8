@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "./Layout";
 import { useLocation } from "react-router-dom";
+import Slider from "./Slider";
 
 const PageLogement = () => {
   const location = useLocation();
@@ -9,13 +10,7 @@ const PageLogement = () => {
 
   return (
     <Layout>
-      <div>
-        <h1>{logement.title}</h1>
-        <img
-          src={logement.pictures ? logement.pictures[0] : logement.picture}
-          alt=""
-        />
-      </div>
+      <Slider logement={logement} />
     </Layout>
   );
 };
