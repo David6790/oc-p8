@@ -8,3 +8,30 @@
     display: flex;
     flex-direction: column;
 }
+
+
+@mixin cardShadow {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+
+
+
+@mixin desktopVersion{
+    @media screen and (min-width : 993px){
+        @content;
+    }
+}
+
+@mixin tabletteVersion{
+    @media screen and (min-width:768px) and (max-width: 992px){
+        @content;
+    }
+}
+
+@mixin mobileVersion{
+    @media screen and (max-width: 767px){
+        @content;
+    };
+}

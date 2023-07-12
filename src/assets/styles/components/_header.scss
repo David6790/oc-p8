@@ -1,6 +1,15 @@
 .header{
     @include flexRow;
-    align-items: center;
+    align-items:center;
     justify-content: space-between;
     
+}
+
+.logo{
+    width: 210px;
+    height: 68px;
+    @include mobileVersion{
+        width: 145px;
+        height: 47px;
+    }
 }

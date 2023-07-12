@@ -12,6 +12,9 @@
         font-size: 288px;
         font-weight: 700;
         color: $colorPrimary;
+        @include mobileVersion{
+            font-size: 96px;
+        }
 
     }
     h3{
@@ -19,6 +22,9 @@
         font-size: 36px;
         font-weight: 500;
         color: $colorPrimary;
+        @include mobileVersion{
+            font-size: 18px;
+        }
 
     }
     span{

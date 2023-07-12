@@ -10,10 +10,15 @@ body{
     background-color: white;
     margin: auto;
     .wrapper{
+        background-color: white;
         max-width: 1440px;
         width: 100%;
         margin: auto;
-        padding: 50px 60px;
+        padding: 50px 60px 0px 60px;
+        @include mobileVersion{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
         
 
     }
