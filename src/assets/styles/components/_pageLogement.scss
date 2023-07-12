@@ -1,19 +1,16 @@
 .slideShowContainer{
-    border: solid 1px blakc;
+   
     margin-top: 50px;
     margin-bottom: 50px;
     max-width: 100%;
     height: 415px;
     position: relative;
-    
-    
-   
+
     .sliderImage{
         width: 100%;
         height: 100%;
         object-fit: cover;  
-        
-       
+         
     }
     .arrow{
         position: absolute;
@@ -44,4 +41,66 @@
         
     }
     
+}
+
+.cardDetailContainer{
+    color: $colorPrimary;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    
+    width: 100%;
+    h1{
+        font-size: 36px;
+        font-weight: 500; 
+        margin-left: -2px;
+    }
+    p{
+        font-size:18px ;
+    }
+    .tags{
+        margin-top: 20px;
+        
+        display: flex;
+        gap: 20px;
+
+        .tagCard{
+            background-color: $colorPrimary;
+            color: white;
+            font-size: 14px;
+            min-width: 115px;
+            text-align: center;
+            padding: 5px 10px;
+            border-radius: 18px;
+        }
+        
+    }
+    .ownerRatings{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        i{
+            font-size: larger;
+        }
+
+        .owner{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+           
+    
+            .ownerName{
+                text-align: right;
+                max-width: 90px;
+            }
+            .ownerPicture{
+                width: 64px;
+                height: 64px;
+                border-radius: 100%;
+                overflow: hidden;
+                
+            }
+        }
+    }
 }
