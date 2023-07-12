@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "./Layout";
+import Layout from "../components/Layout/Layout";
 import { NavLink } from "react-router-dom";
 
 const Landing404 = () => {

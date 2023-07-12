@@ -1,9 +1,10 @@
 import React from "react";
-import Layout from "./Layout";
+import Layout from "../components/Layout/Layout";
 import { useLocation } from "react-router-dom";
-import Slider from "./Slider";
-import LogementDetails from "./LogementDetails";
-import CollapesUnitAbout from "./CollapesUnitAbout";
+
+import LogementDetails from "../components/PageLogement/LogementDetails";
+import CollapesUnitAbout from "../components/CollapesUnit";
+import Slider from "../components/PageLogement/Slider";
 
 const PageLogement = () => {
   const location = useLocation();

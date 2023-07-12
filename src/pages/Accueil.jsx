@@ -1,7 +1,7 @@
 import React from "react";
-import Layout from "../components/Layout";
+import Layout from "../components/Layout/Layout";
 import Banner from "../components/Banner";
-import CardContainer from "../components/CardContainer";
+import CardContainer from "../components/Cards/CardContainer";
 
 const Accueil = () => {
   return (
