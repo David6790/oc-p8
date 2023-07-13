@@ -5,6 +5,7 @@ import CardsContainer from "../components/pageLogement/cards/CardsContainer";
 
 
 
+
 const Accueil = () => {
   return (
     <Layout>
@@ -12,7 +13,7 @@ const Accueil = () => {
         imageSource="./img/banner.png"
         content="Chez vous, partout et ailleurs"
       />
-      <CardsContainer/>
+     <CardsContainer/>
     </Layout>
   );
 };
