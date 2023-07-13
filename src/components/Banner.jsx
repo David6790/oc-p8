@@ -1,9 +1,9 @@
 import React from "react";
 
-const Banner = ({ imageSource, content }) => {
+const Banner = ({ content,imageSource }) => {
   return (
     <div className="banner">
-      <img src={imageSource} alt="banner vue sur la mer" />
+      <img src={imageSource} alt="banner" />
 
       <p>{content}</p>
     </div>

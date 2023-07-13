@@ -1,7 +1,8 @@
 import React from "react";
-import Layout from "../components/Layout/Layout";
+import Layout from "../components/layout/Layout";
 import Banner from "../components/Banner";
-import CardContainer from "../components/PageLogement/Cards/CardContainer";
+import CardsContainer from "../components/pageLogement/cards/CardsContainer";
+
 
 
 const Accueil = () => {
@@ -11,7 +12,7 @@ const Accueil = () => {
         imageSource="./img/banner.png"
         content="Chez vous, partout et ailleurs"
       />
-      <CardContainer/>
+      <CardsContainer/>
     </Layout>
   );
 };

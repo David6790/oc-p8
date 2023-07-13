@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const CollapesUnitAbout = ({ title, content }) => {
+const CollapesUnit = ({ content, title  }) => {
   const [open, setOpen] = useState(false);
 
   const toogleCollape = () => {
@@ -9,11 +9,11 @@ const CollapesUnitAbout = ({ title, content }) => {
 
   return (
     <>
-      <div className="collapesUnit">
+      <div onClick={toogleCollape} className="collapesUnit">
         <div className="titleToogle">
           <span>{title}</span>
           <button
-            onClick={toogleCollape}
+            
             className={`buttonActive ${open ? "rotate" : "buttonInactive"}`}
           >
             <i className="fa-solid fa-chevron-down"></i>
@@ -27,4 +27,4 @@ const CollapesUnitAbout = ({ title, content }) => {
   );
 };
 
-export default CollapesUnitAbout;
+export default CollapesUnit;
