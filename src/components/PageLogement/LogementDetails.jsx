@@ -1,15 +1,15 @@
 import React from "react";
 import Ratings from "./Ratings";
 
-const LogementDetails = ({ logement }) => {
+const LogementDetails = ({ accomodation }) => {
   return (
     <div className="cardDetailContainer">
       <div className="cardTitleTags">
-        <h1>{logement.title}</h1>
-        <span>{logement.location}</span>
+        <h1>{accomodation.title}</h1>
+        <span>{accomodation.location}</span>
         <div className="tags">
-          {logement.tags &&
-            logement.tags.map((item) => (
+          {accomodation.tags &&
+            accomodation.tags.map((item) => (
               <div className="tagCard" key={crypto.randomUUID()}>
                 {item}
               </div>
@@ -18,13 +18,13 @@ const LogementDetails = ({ logement }) => {
       </div>
       <div className="ownerRatings">
         <div className="owner">
-          <div className="ownerName">{logement.host.name}</div>
+          <div className="ownerName">{accomodation.host.name}</div>
           <div className="ownerPicture">
-            <img src={logement.host.picture} alt="" />
+            <img src={accomodation.host.picture} alt="" />
           </div>
         </div>
         <div className="ratings">
-          <Ratings logement={logement} />
+          <Ratings accomodation={accomodation} />
         </div>
       </div>
     </div>

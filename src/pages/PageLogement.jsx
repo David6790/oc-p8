@@ -9,24 +9,24 @@ import Slider from "../components/pageLogement/Slider";
 const PageLogement = () => {
   const location = useLocation();
   const { myState } = location.state;
-  const logement = myState.logement;
+  const accomodation = myState.accomodation;
 
   return (
     <Layout>
-      <Slider logement={logement} />
-      <LogementDetails logement={logement} />
+      <Slider accomodation={accomodation} />
+      <LogementDetails accomodation={accomodation} />
       <div className="logementCollapseContainer">
         <div className="collapseLogement">
           <CollapesUnit
             title={"Description"}
-            content={logement.description}
+            content={accomodation.description}
           />
         </div>
 
         <div className="collapseLogement">
           <CollapesUnit
             title={"Equipement"}
-            content={logement.equipments.map((item) => (
+            content={accomodation.equipments.map((item) => (
               <p key={crypto.randomUUID()}>{item}</p>
             ))}
           />

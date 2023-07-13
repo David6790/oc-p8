@@ -1,17 +1,17 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const CardLogement = ({ logement }) => {
+const CardLogement = ({ accomodation }) => {
   return (
-    <NavLink to="./logement" state={{ myState: { logement } }}>
-      {logement && (
+    <NavLink to="./logement" state={{ myState: { accomodation } }}>
+      {accomodation && (
         <div className="cardLogement">
           <div className="cardLogement_image">
-            <img src={logement.cover} alt="" />
+            <img src={accomodation.cover} alt="" />
           </div>
           <div className="cardLogement_titre">
             <div className="cardLogement_titre_1">
-              <span>{logement.title}</span>
+              <span>{accomodation.title}</span>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Ratings = ({ logement }) => {
+const Ratings = ({ accomodation }) => {
   const note = [5, 4, 3, 2, 1];
 
   return (
@@ -9,7 +9,7 @@ const Ratings = ({ logement }) => {
         <i
           key={crypto.randomUUID()}
           className={
-            logement.rating <= note ? "fa-solid fa-star" : "fa-regular fa-star"
+            accomodation.rating <= note ? "fa-solid fa-star" : "fa-regular fa-star"
           }
         ></i>
       ))}

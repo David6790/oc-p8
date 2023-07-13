@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 
-const Slider = ({ logement }) => {
+const Slider = ({ accomodation }) => {
   const [indice, setIndice] = useState(0);
 
   const handleClickRight = () => {
-    indice < logement.pictures.length - 1
+    indice < accomodation.pictures.length - 1
       ? setIndice(indice + 1)
       : setIndice(0);
   };
   const handleClickLeft = () => {
     if (indice === 0) {
-      setIndice(logement.pictures.length - 1);
+      setIndice(accomodation.pictures.length - 1);
     } else {
       setIndice(indice - 1);
     }
@@ -20,10 +20,10 @@ const Slider = ({ logement }) => {
       <div className="slideShowContainer">
         <img
           className="sliderImage"
-          src={logement.pictures ? logement.pictures[indice] : logement.picture}
+          src={accomodation.pictures ? accomodation.pictures[indice] : accomodation.picture}
           alt=""
         />
-        {logement.pictures.length > 1 ? (
+        {accomodation.pictures.length > 1 ? (
           <div className="arrow">
             <img
               onClick={handleClickLeft}
@@ -43,9 +43,9 @@ const Slider = ({ logement }) => {
         )}
 
         <span>
-          {logement.pictures
-            ? `${indice + 1} / ${logement.pictures.length}`
-            : `${logement.picture.length}`}
+          {accomodation.pictures
+            ? `${indice + 1} / ${accomodation.pictures.length}`
+            : `${accomodation.picture.length}`}
         </span>
       </div>
     </div>

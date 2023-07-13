@@ -17,8 +17,8 @@ const CardsContainer = () => {
     <div className="cardContainer">
       {accomodations &&
         accomodations.length > 0 &&
-        accomodations.map((logement) => (
-          <CardLogement key={crypto.randomUUID()} logement={logement} />
+        accomodations.map((accomodation) => (
+          <CardLogement key={crypto.randomUUID()} accomodation={accomodation} />
         ))}
     </div>
   );
