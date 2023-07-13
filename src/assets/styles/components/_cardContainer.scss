@@ -18,6 +18,8 @@
         padding-top: 10px;
         background-color: white;
     }
-    
+    @include tabletteVersion{
+        gap: 30px;
+    }
     
 }

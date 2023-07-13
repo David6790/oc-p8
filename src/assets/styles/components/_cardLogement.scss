@@ -8,11 +8,11 @@
     &:hover{
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     }
-
-    @include mobileVersion{
-        
+    @include tabletteVersion{
+        width: 250px;
+        height: 250px;
     }
-  
+
 }
 
 .cardLogement_image{
@@ -39,6 +39,9 @@
     @include flexColumn;
     justify-content: flex-end;
     text-align: left;
+    @include tabletteVersion{
+        font-size: 13px;
+    }
    
 
     &_1{
