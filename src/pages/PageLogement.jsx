@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../components/layout/Layout";
+import Layout from "../components/Layout/Layout";
 import { useLocation } from "react-router-dom";
 
 import LogementDetails from "../components/pageLogement/LogementDetails";
