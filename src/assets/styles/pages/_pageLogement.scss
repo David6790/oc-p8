@@ -1,174 +1,157 @@
-.slideShowContainer{
-   
-    margin-top: 50px;
-    margin-bottom: 50px;
-    max-width: 100%;
-    height: 415px;
-    position: relative;
-    @include mobileVersion{
-        height: 255px;
-    }
+.slideShowContainer {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  max-width: 100%;
+  height: 415px;
+  position: relative;
+  @include mobileVersion {
+    height: 255px;
+  }
 
-    .sliderImage{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;  
-         
-    }
-    .arrow{
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        
-    }
+  .sliderImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .arrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
-    .arrow-left{
-        margin-left: 10px;   
-        @include mobileVersion{
-            width: 24px;
-            height: 34px;
-            
-        }
-    }
-    .arrow-right{
-       margin-right: 10px;    
-       @include mobileVersion{
-        width: 24px;
-        height: 34px;
-       }
-    }
-
-    span{
-        position: absolute;
-        font-size: 18px;
-        color: white;
-        top: 90%;
-        left: 50%;
-        transform: translate(-50%, -50%)
-        
-    }
-    
-}
-
-.cardDetailContainer{
-    color: $colorPrimary;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
-    @include mobileVersion{
-        flex-direction: column;
-    }
-    
-    width: 100%;
-    h1{
-        font-size: 36px;
-        font-weight: 500; 
-        margin-left: -2px;
-        @include mobileVersion{
-            font-size: 18px;
-        }
-    }
-    p{
-        font-size:18px ;
-        @include mobileVersion{
-            font-size: 14px;
-        }
-    }
-    .tags{
-        margin-top: 20px;
-        display: flex;
-        gap: 20px;
-        width: 100%;
-        margin-right: 20px;
-        @include mobileVersion{
-            gap:10px
-        
-        }
-        
-       
-       
+    align-items: center;
+  }
 
-        .tagCard{
-            background-color: $colorPrimary;
-            color: white;
-            font-size: 14px;
-            min-width: 115px;
-            text-align: center;
-            padding: 5px 10px;
-            border-radius: 18px;
-            @include mobileVersion{
-                font-size: 10px;
-                min-width: 50px;
-                max-width: 100%;
-
-            }
-        }
-        
+  .arrow-left {
+    margin-left: 10px;
+    @include mobileVersion {
+      width: 24px;
+      height: 34px;
     }
-    .ownerRatings{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        i{
-            font-size: larger;
-        }
-        @include mobileVersion{
-            flex-direction: row-reverse;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 15px;
-            margin-bottom: 10px;
-
-        }
-       
-
-        .owner{
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 20px;
-            @include mobileVersion{
-                margin-bottom: -10px;
-            }
-           
-            
-           
-    
-            .ownerName{
-                text-align: right;
-                max-width: 90px;
-            }
-            .ownerPicture{
-                width: 64px;
-                height: 64px;
-                border-radius: 100%;
-                overflow: hidden;
-                
-            }
-        }
+  }
+  .arrow-right {
+    margin-right: 10px;
+    @include mobileVersion {
+      width: 24px;
+      height: 34px;
     }
+  }
+
+  span {
+    position: absolute;
+    font-size: 18px;
+    color: white;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
-.collapseLogement{
+
+.cardDetailContainer {
+  color: $colorPrimary;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  @include mobileVersion {
+    flex-direction: column;
+  }
+
+  width: 100%;
+  h1 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-left: -2px;
+    @include mobileVersion {
+      font-size: 18px;
+    }
+  }
+  p {
+    font-size: 18px;
+    @include mobileVersion {
+      font-size: 14px;
+    }
+  }
+  .tags {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    margin-right: 20px;
+    @include mobileVersion {
+      gap: 10px;
+    }
+
+    .tagCard {
+      background-color: $colorPrimary;
+      color: white;
+      font-size: 14px;
+      min-width: 115px;
+      text-align: center;
+      padding: 5px 10px;
+      border-radius: 18px;
+      @include mobileVersion {
+        font-size: 10px;
+        min-width: 50px;
+        max-width: 100%;
+      }
+    }
+  }
+  .ownerRatings {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    @include mobileVersion{
-        width: 100%;
+    align-items: flex-end;
+    i {
+      font-size: larger;
     }
+    @include mobileVersion {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+
+    .owner {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 20px;
+      @include mobileVersion {
+        margin-bottom: -10px;
+      }
+
+      .ownerName {
+        text-align: right;
+        max-width: 90px;
+      }
+      .ownerPicture {
+        width: 64px;
+        height: 64px;
+        border-radius: 100%;
+        overflow: hidden;
+      }
+    }
+  }
+}
+.collapseLogement {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  @include mobileVersion {
+    width: 100%;
+  }
 }
 
-.logementCollapseContainer{
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    @include mobileVersion{
-        flex-direction: column;
-        width: 100%;
-    }
+.logementCollapseContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  @include mobileVersion {
+    flex-direction: column;
+    width: 100%;
+    gap: 0px;
+  }
 }

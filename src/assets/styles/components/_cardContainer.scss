@@ -17,6 +17,7 @@
     height: 100%;
     padding-top: 10px;
     background-color: white;
+    overflow: hidden;
   }
   @include tabletteVersion {
     gap: 30px;
