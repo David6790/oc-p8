@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Accueil from "./pages/Accueil";
 import Apropos from "./pages/Apropos";
 import Landing404 from "./pages/Landing404";
-import PageLogement from "./pages/PageLogement";
+import PageAccomodation from "./pages/PageAccomodation";
 
 const Routeur = ({ accomadations }) => {
   return (
@@ -15,7 +15,7 @@ const Routeur = ({ accomadations }) => {
           <Route
             key={crypto.randomUUID()}
             path={`/accomodation + ${item.id}`}
-            element={<PageLogement accomodation={item} />}
+            element={<PageAccomodation accomodation={item} />}
           />
         ))}
       </Routes>

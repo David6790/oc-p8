@@ -1,14 +1,14 @@
 import React from "react";
 import Slider from "../components/pageLogement/Slider";
 import CollapesUnit from "../components/CollapesUnit";
-import LogementDetails from "../components/pageLogement/LogementDetails";
+import AccomodationDetails from "../components/pageLogement/AccomodationDetails";
 import Layout from "../components/layout/Layout";
 
 const PageLogement = ({ accomodation }) => {
   return (
     <Layout>
       <Slider accomodation={accomodation} />
-      <LogementDetails accomodation={accomodation} />
+      <AccomodationDetails accomodation={accomodation} />
       <div className="logementCollapseContainer">
         <div className="collapseLogement">
           <CollapesUnit
