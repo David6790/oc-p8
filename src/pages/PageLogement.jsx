@@ -1,16 +1,10 @@
 import React from "react";
-import Layout from "../components/layout/Layout";
-import { useLocation } from "react-router-dom";
-
-import LogementDetails from "../components/pageLogement/LogementDetails";
-import CollapesUnit from "../components/CollapesUnit";
 import Slider from "../components/pageLogement/Slider";
+import CollapesUnit from "../components/CollapesUnit";
+import LogementDetails from "../components/pageLogement/LogementDetails";
+import Layout from "../components/layout/Layout";
 
-const PageLogement = () => {
-  const location = useLocation();
-  const { myState } = location.state;
-  const accomodation = myState.accomodation;
-
+const PageLogement = ({ accomodation }) => {
   return (
     <Layout>
       <Slider accomodation={accomodation} />

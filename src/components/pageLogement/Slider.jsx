@@ -20,7 +20,11 @@ const Slider = ({ accomodation }) => {
       <div className="slideShowContainer">
         <img
           className="sliderImage"
-          src={accomodation.pictures ? accomodation.pictures[indice] : accomodation.picture}
+          src={
+            accomodation.pictures
+              ? accomodation.pictures[indice]
+              : accomodation.picture
+          }
           alt=""
         />
         {accomodation.pictures.length > 1 ? (

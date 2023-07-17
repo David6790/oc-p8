@@ -1,19 +1,23 @@
 import React from "react";
 import Layout from "../components/layout/Layout";
 import Banner from "../components/Banner";
-import CardsContainer from "../components/pageLogement/cards/CardsContainer";
+import CardLogement from "../components/pageLogement/CardLogement";
+import { NavLink } from "react-router-dom";
 
-
-
-
-const Accueil = () => {
+const Accueil = ({ accomodations }) => {
   return (
     <Layout>
       <Banner
         imageSource="./img/banner.png"
         content="Chez vous, partout et ailleurs"
       />
-     <CardsContainer/>
+      <div className="cardContainer">
+        {accomodations.map((item) => (
+          <NavLink key={crypto.randomUUID()} to={`/accomodation + ${item.id}`}>
+            <CardLogement key={crypto.randomUUID()} accomodation={item} />
+          </NavLink>
+        ))}
+      </div>
     </Layout>
   );
 };
