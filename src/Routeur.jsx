@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Accueil from "./pages/Accueil";
-import Apropos from "./pages/Apropos";
+import Home from "./pages/Home";
+import About from "./pages/About";
 import Landing404 from "./pages/Landing404";
 import PageAccomodation from "./pages/PageAccomodation";
 
@@ -8,8 +8,8 @@ const Routeur = ({ accomadations }) => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Accueil accomodations={accomadations} />} />
-        <Route path="/apropos" element={<Apropos />} />
+        <Route path="/" element={<Home accomodations={accomadations} />} />
+        <Route path="/apropos" element={<About />} />
         <Route path="*" element={<Landing404 />} />
         {accomadations.map((item) => (
           <Route
