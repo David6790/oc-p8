@@ -11,13 +11,17 @@ const Routeur = ({ accomadations }) => {
         <Route path="/" element={<Home accomodations={accomadations} />} />
         <Route path="/apropos" element={<About />} />
         <Route path="*" element={<Landing404 />} />
-        {accomadations.map((item) => (
-          <Route
-            key={crypto.randomUUID()}
-            path={`/accomodation + ${item.id}`}
-            element={<PageAccomodation accomodation={item} />}
-          />
-        ))}
+        {accomadations.map((item) =>
+          item.id ? (
+            <Route
+              key={crypto.randomUUID()}
+              path={`/accomodation + ${item.id}`}
+              element={<PageAccomodation accomodation={item} />}
+            />
+          ) : (
+            <Route path="*" element={<Landing404 />} />
+          )
+        )}
       </Routes>
     </BrowserRouter>
   );
