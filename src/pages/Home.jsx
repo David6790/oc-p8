@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layout/Layout";
 import Banner from "../components/Banner";
-import CardLogement from "../components/pageLogement/CardAccomodation";
+import CardLogement from "../components/pageAccomodation/CardAccomodation";
 import { NavLink } from "react-router-dom";
 
 const Accueil = ({ accomodations }) => {

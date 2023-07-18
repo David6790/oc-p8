@@ -1,7 +1,7 @@
 import React from "react";
-import Slider from "../components/pageLogement/Slider";
+import Slider from "../components/pageAccomodation/Slider";
 import CollapesUnit from "../components/CollapesUnit";
-import AccomodationDetails from "../components/pageLogement/AccomodationDetails";
+import AccomodationDetails from "../components/pageAccomodation/AccomodationDetails";
 import Layout from "../components/layout/Layout";
 
 const PageLogement = ({ accomodation }) => {
