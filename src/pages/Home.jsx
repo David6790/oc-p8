@@ -4,7 +4,7 @@ import Banner from "../components/Banner";
 import CardLogement from "../components/pageAccomodation/CardAccomodation";
 import { NavLink } from "react-router-dom";
 
-const Accueil = ({ accomodations }) => {
+const Home = ({ accomodations }) => {
   return (
     <Layout>
       <Banner
@@ -22,4 +22,4 @@ const Accueil = ({ accomodations }) => {
   );
 };
 
-export default Accueil;
+export default Home;

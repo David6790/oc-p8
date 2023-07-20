@@ -4,7 +4,7 @@ import CollapesUnit from "../components/CollapesUnit";
 import AccomodationDetails from "../components/pageAccomodation/AccomodationDetails";
 import Layout from "../components/layout/Layout";
 
-const PageLogement = ({ accomodation }) => {
+const PageAccomodation = ({ accomodation }) => {
   return (
     <Layout>
       <Slider accomodation={accomodation} />
@@ -30,4 +30,4 @@ const PageLogement = ({ accomodation }) => {
   );
 };
 
-export default PageLogement;
+export default PageAccomodation;

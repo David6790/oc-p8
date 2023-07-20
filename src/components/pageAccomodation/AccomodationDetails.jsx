@@ -1,7 +1,7 @@
 import React from "react";
 import Ratings from "./Ratings";
 
-const LogementDetails = ({ accomodation }) => {
+const AccomodationDetails = ({ accomodation }) => {
   return (
     <div className="cardDetailContainer">
       <div className="cardTitleTags">
@@ -31,4 +31,4 @@ const LogementDetails = ({ accomodation }) => {
   );
 };
 
-export default LogementDetails;
+export default AccomodationDetails;

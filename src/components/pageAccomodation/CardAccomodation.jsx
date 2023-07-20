@@ -1,6 +1,6 @@
 import React from "react";
 
-const CardLogement = ({ accomodation }) => {
+const CardAccomodation = ({ accomodation }) => {
   return (
     <div className="cardLogement">
       <div className="cardLogement_image">
@@ -15,4 +15,4 @@ const CardLogement = ({ accomodation }) => {
   );
 };
 
-export default CardLogement;
+export default CardAccomodation;
