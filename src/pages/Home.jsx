@@ -1,10 +1,23 @@
 import React from "react";
 import Layout from "../components/layout/Layout";
 import Banner from "../components/Banner";
-import CardLogement from "../components/pageAccomodation/CardAccomodation";
 import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import CardAccomodation from "../components/pageAccomodation/CardAccomodation";
+import api from "../components/api";
 
-const Home = ({ accomodations }) => {
+const Home = () => {
+  const [accomodations, setAccomodations] = useState([]);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    !isMounted &&
+      api.getAccomodations().then((json) => {
+        setAccomodations(json);
+        setIsMounted(true);
+      });
+  }, [isMounted]);
+
   return (
     <Layout>
       <Banner
@@ -13,8 +26,8 @@ const Home = ({ accomodations }) => {
       />
       <div className="cardContainer">
         {accomodations.map((item) => (
-          <NavLink key={crypto.randomUUID()} to={`/accomodation + ${item.id}`}>
-            <CardLogement key={crypto.randomUUID()} accomodation={item} />
+          <NavLink key={crypto.randomUUID()} to={`/accomodation/${item.id}`}>
+            <CardAccomodation key={crypto.randomUUID()} accomodation={item} />
           </NavLink>
         ))}
       </div>

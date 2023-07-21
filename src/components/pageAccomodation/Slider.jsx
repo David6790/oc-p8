@@ -15,36 +15,28 @@ const Slider = ({ accomodation }) => {
       setIndice(indice - 1);
     }
   };
-  return (
+  return accomodation.pictures ? (
     <div>
       <div className="slideShowContainer">
         <img
           className="sliderImage"
-          src={
-            accomodation.pictures
-              ? accomodation.pictures[indice]
-              : accomodation.picture
-          }
+          src={accomodation.pictures[indice]}
           alt=""
         />
-        {accomodation.pictures.length > 1 ? (
-          <div className="arrow">
-            <img
-              onClick={handleClickLeft}
-              src="./img/arrowLeft.png"
-              alt="arrow-left"
-              className="arrow-left"
-            />
-            <img
-              onClick={handleClickRight}
-              src="./img/arrowRight.png"
-              alt="arrow-right"
-              className="arrow-right"
-            />
-          </div>
-        ) : (
-          ""
-        )}
+        <div className="arrow">
+          <img
+            onClick={handleClickLeft}
+            src="../img/arrowLeft.png"
+            alt="arrow-left"
+            className="arrow-left"
+          />
+          <img
+            onClick={handleClickRight}
+            src="../img/arrowRight.png"
+            alt="arrow-right"
+            className="arrow-right"
+          />
+        </div>
 
         <span>
           {accomodation.pictures
@@ -53,6 +45,8 @@ const Slider = ({ accomodation }) => {
         </span>
       </div>
     </div>
+  ) : (
+    ""
   );
 };
 

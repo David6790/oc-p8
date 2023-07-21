@@ -18,9 +18,14 @@ const AccomodationDetails = ({ accomodation }) => {
       </div>
       <div className="ownerRatings">
         <div className="owner">
-          <div className="ownerName">{accomodation.host.name}</div>
+          <div className="ownerName">
+            {accomodation.host ? accomodation.host.name : ""}
+          </div>
           <div className="ownerPicture">
-            <img src={accomodation.host.picture} alt="" />
+            <img
+              src={accomodation.host ? accomodation.host.picture : ""}
+              alt=""
+            />
           </div>
         </div>
         <div className="ratings">
