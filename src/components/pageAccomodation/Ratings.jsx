@@ -1,20 +1,13 @@
-import React from "react";
+import Rating from "../utils/Rating";
 
-const Ratings = ({ accomodation }) => {
-  const note = [5, 4, 3, 2, 1];
+const Ratings = ({ rating }) => {
+  let ratings = [];
 
-  return (
-    <div>
-      {note.map((note) => (
-        <i
-          key={crypto.randomUUID()}
-          className={
-            accomodation.rating <= note ? "fa-solid fa-star" : "fa-regular fa-star"
-          }
-        ></i>
-      ))}
-    </div>
-  );
+  for (let r = 5; r > 0; r--) {
+    ratings.push(<Rating note={rating} i={r} />);
+  }
+
+  return <div>{ratings}</div>;
 };
 
 export default Ratings;

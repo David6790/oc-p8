@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import api from "../components/api";
+import api from "../components/utils/api";
 import { Navigate, useParams } from "react-router-dom";
 import Layout from "../components/layout/Layout";
 import Slider from "../components/pageAccomodation/Slider";

@@ -29,7 +29,7 @@ const AccomodationDetails = ({ accomodation }) => {
           </div>
         </div>
         <div className="ratings">
-          <Ratings accomodation={accomodation} />
+          <Ratings rating={accomodation.rating} />
         </div>
       </div>
     </div>
