@@ -9,15 +9,12 @@ import AccomodationDetails from "../components/pageAccomodation/AccomodationDeta
 const PageAccomodation = () => {
   const { id } = useParams();
   const [accomodation, setAccomodation] = useState([]);
-  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    !isMounted &&
-      api.getAccomodations().then((data) => {
-        setAccomodation(data.find((ele) => ele.id === id));
-        setIsMounted(true);
-      });
-  }, [isMounted, id]);
+    api.getAccomodations().then((data) => {
+      setAccomodation(data.find((ele) => ele.id === id));
+    });
+  }, [id]);
 
   return accomodation ? (
     <Layout>
