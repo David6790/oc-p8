@@ -1,4 +1,4 @@
-import Rating from "../utils/Rating";
+import Rating from "./Rating";
 
 const Ratings = ({ rating }) => {
   let ratings = [];

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import api from "../components/utils/api";
+import api from "../utils/api";
 import { Navigate, useParams } from "react-router-dom";
 import Layout from "../components/layout/Layout";
 import Slider from "../components/pageAccomodation/Slider";
@@ -11,8 +11,8 @@ const PageAccomodation = () => {
   const [accomodation, setAccomodation] = useState([]);
 
   useEffect(() => {
-    api.getAccomodations().then((data) => {
-      setAccomodation(data.find((ele) => ele.id === id));
+    api.getAccomodation(id).then((data) => {
+      setAccomodation(data);
     });
   }, [id]);
 

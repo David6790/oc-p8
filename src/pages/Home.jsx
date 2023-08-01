@@ -4,7 +4,7 @@ import Banner from "../components/Banner";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import CardAccomodation from "../components/pageAccomodation/CardAccomodation";
-import api from "../components/utils/api";
+import api from "../utils/api";
 
 const Home = () => {
   const [accomodations, setAccomodations] = useState([]);
