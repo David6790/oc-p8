@@ -1,5 +1,7 @@
-import React from "react";
+// creation du composant qui affiche chaque logement dans une card dans la page d'acceuil.
 
+import React from "react";
+// faire passer une props qui correspond aux données liées a un logement
 const CardAccomodation = ({ accomodation }) => {
   return (
     <div className="cardLogement">

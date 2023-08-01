@@ -5,11 +5,14 @@ import Layout from "../components/layout/Layout";
 import Slider from "../components/pageAccomodation/Slider";
 import CollapesUnit from "../components/CollapesUnit";
 import AccomodationDetails from "../components/pageAccomodation/AccomodationDetails";
+import Landing404 from "./Landing404";
 
 const PageAccomodation = () => {
+  // recupérer l'id de l'url avec useParam()
   const { id } = useParams();
   const [accomodation, setAccomodation] = useState([]);
 
+  // appel de l'api en cherchant juste à faire appel au logement dont le ID correspond a l'id de l'URL
   useEffect(() => {
     api.getAccomodation(id).then((data) => {
       setAccomodation(data);
@@ -32,11 +35,13 @@ const PageAccomodation = () => {
           <CollapesUnit
             title={"Equipement"}
             content={
-              accomodation.equipments
-                ? accomodation.equipments.map((item) => (
-                    <p key={crypto.randomUUID()}>{item}</p>
-                  ))
-                : ""
+              accomodation.equipments ? (
+                accomodation.equipments.map((item) => (
+                  <p key={crypto.randomUUID()}>{item}</p>
+                ))
+              ) : (
+                <Landing404 />
+              )
             }
           />
         </div>

@@ -3,6 +3,7 @@ import Layout from "../components/layout/Layout";
 import Banner from "../components/Banner";
 import CollapesUnit from "../components/CollapesUnit";
 
+// composant qui gère la page a propos
 const About = () => {
   return (
     <Layout>

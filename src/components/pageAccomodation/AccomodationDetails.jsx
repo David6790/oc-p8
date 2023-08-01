@@ -1,6 +1,7 @@
 import React from "react";
 import Ratings from "./Ratings";
 
+// composant qui gère les infos detaillés des logement.
 const AccomodationDetails = ({ accomodation }) => {
   return (
     <div className="cardDetailContainer">

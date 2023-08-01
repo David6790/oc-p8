@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+// composant qui gère la barre de navigation. Ajout d'un style conditionel avec une ternaire pour avoir le lien souligné quand la page est active.
 const Navigation = () => {
   return (
     <div className="navigation">

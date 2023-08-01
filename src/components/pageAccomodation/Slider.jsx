@@ -1,13 +1,19 @@
+// composant qui gère le slider dans la page dediée à chaque logement. Gestion du defilement à l'infini du carousel
+
 import React, { useState } from "react";
 
+// creation d'un setter d'indice pour trouver les images dans le array pictures de chaque logement
 const Slider = ({ accomodation }) => {
   const [indice, setIndice] = useState(0);
 
+  // gestion du click sur la fleche de droite
   const handleClickRight = () => {
     indice < accomodation.pictures.length - 1
       ? setIndice(indice + 1)
       : setIndice(0);
   };
+
+  // gestion du click sur la fleche de gauche
   const handleClickLeft = () => {
     if (indice === 0) {
       setIndice(accomodation.pictures.length - 1);
@@ -15,6 +21,7 @@ const Slider = ({ accomodation }) => {
       setIndice(indice - 1);
     }
   };
+
   return accomodation.pictures ? (
     <div>
       <div className="slideShowContainer">

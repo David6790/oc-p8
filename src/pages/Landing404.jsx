@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layout/Layout";
 import { NavLink } from "react-router-dom";
-
+// composant qui gère la page du landing 404
 const Landing404 = () => {
   return (
     <Layout>
