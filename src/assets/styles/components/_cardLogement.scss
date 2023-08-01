@@ -1,53 +1,60 @@
-.cardLogement{
-    width: 340px;
-    height: 340px;
-    border-radius: 10px ;
-    background-color: grey;
-    position: relative;
-    @include cardShadow;
-    &:hover{
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    }
-    @include tabletteVersion{
-        width: 250px;
-        height: 250px;
-    }
-
+.cardLogement {
+  width: 340px;
+  height: 340px;
+  border-radius: 10px;
+  background-color: grey;
+  position: relative;
+  @include cardShadow;
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  @include tabletteVersion {
+    width: 250px;
+    height: 250px;
+  }
 }
 
-.cardLogement_image{
+.cardLogement_image {
+  width: 100%;
+  height: 100%;
+  img {
     width: 100%;
     height: 100%;
-    img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 10px;
-    }
-}
-
-.cardLogement_titre{
+    object-fit: cover;
     border-radius: 10px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.70) 100%);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    @include flexColumn;
-    justify-content: flex-end;
-    text-align: left;
-    @include tabletteVersion{
-        font-size: 13px;
-    }
-   
+  }
+}
 
-    &_1{
-        color: $colorSecondary;
-        margin-left: 20px;
-        margin-bottom: 20px;
-    }
-       
+.cardLogement_titre {
+  border-radius: 10px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  @include flexColumn;
+  justify-content: flex-end;
+  text-align: left;
+  @include tabletteVersion {
+    font-size: 13px;
+  }
+  .cardLogement_titre_1 {
+    left: 10px;
+
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  &_1 {
+    color: $colorSecondary;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
 }
