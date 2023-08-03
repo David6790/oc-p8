@@ -5,7 +5,7 @@ import Layout from "../components/layout/Layout";
 import Banner from "../components/Banner";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
-import CardAccomodation from "../components/pageAccomodation/CardAccomodation";
+import CardAccomodation from "../components/CardAccomodation";
 import api from "../utils/api";
 import Landing404 from "./Landing404";
 
