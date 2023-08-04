@@ -32,6 +32,9 @@
       height: 34px;
     }
   }
+  .displayNone {
+    display: none;
+  }
   .arrow-right {
     margin-right: 10px;
     @include mobileVersion {

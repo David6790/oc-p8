@@ -30,7 +30,9 @@ const Slider = ({ accomodation }) => {
           src={accomodation.pictures[indice]}
           alt=""
         />
-        <div className="arrow">
+        <div
+          className={accomodation.pictures.length > 1 ? "arrow" : "displayNone"}
+        >
           <img
             onClick={handleClickLeft}
             src="../img/arrowLeft.png"
